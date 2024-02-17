@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=devicewidth, initialscale=1.0">
+    <title>Dom journey with alpha class 1</title>
+    <!-- css framework Tailwind and daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+</head>
+
+<body class="poppins-font">
+    <main class="bg-[#010313] bg-[url(./images/background.png)] bg-no-repeat  bg-top min-h-screen">
+        <!-- Alpha Home -->
+        <section id="alpha-home" class="min-h-screen  flex flex-col justify-center items-center">
+            <h1 class="text-[150px] text-white anton-font font-[500] ">ALPHABET CLASH</h1>
+            <p class="text-2xl text-white mb-10 font-[500]">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button onclick="play()" class="btn bg-white  text-xl text-[#010313]  font-[500]">Play Now</button>
+        </section>
+
+        <!-- Alpha typing pad -->
+        <section id="play-ground" class="min-h-screen alpha-screen-pad flex flex-col items-center hidden">
+            <!-- typing screen -->
+            <div class="relative my-10 ">
+                <p class="text-xl font-[500] text-white bg-[#010313e1] w-[400px] absolute top-1 left-[30%] p-2 rounded-lg">
+                    Don't watch keyboard while playing...</p>
+                <div
+                    class="artboard uppercase artboard-horizontal phone-6 bottom-5 border-[#010313e1] border-[10px] rounded-xl bg-[#FFFFFFB3] flex flex-col justify-center items-center text-3xl text-[#010313e1]">
+                    <span id="current-alpha-container">A</span>
+                </div>
+            </div>
+
+            <!-- keyboard area -->
+            <div class="">
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+
+            <!-- score buttons -->
+            <div class="mt-10 w-full flex justify-around">
+                <!-- live -->
+                <button class="btn bg-[#894189] border-none text-white">
+                    Life
+                    <img src="./images/Group 23.png" alt="Icons">
+                    <span id="live-chances">5</span>
+                </button>
+                <!-- score -->
+                <button onclick="" class="btn bg-[#360490] border-none text-white">
+                    Score
+                    <img src="./images/monetization_on.png" alt="Icons">
+                    <span id="current-score-element">0</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Alpha typing score -->
+        <section id="typing-score" class="alpha-typin-score min-h-screen flex flex-col justify-center items-center hidden">
+            <div class="w-4/12 text-center p-10 rounded-2xl bg-gradient-to-r from-[#ffffffa3] from-10%  to-[#98979763] to-90%">
+                <p class="text-2xl text-white mb-5">Game Over!</p>
+                <h2 class="text-5xl text-white font-bold mb-4">Score : 
+                    <span id="player-score" class=" font-[500]">0</span>
+                </h2>
+                <button onclick="play()" class="btn bg-white  text-xl text-[#010313]  font-[500]">Play Now</button>
+                <br><br>
+                <p class="text-xl text-white">Practice will make you pro!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/utility.js"></script>
+    <script src="./js/alpha.js"></script>
+</body>
+
+</html>

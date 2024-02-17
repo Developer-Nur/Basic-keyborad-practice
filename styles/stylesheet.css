@@ -1,0 +1,16 @@
+/* google fonts links*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+.poppins-font{
+    font-family: "Poppins", sans-serif;
+}
+
+.anton-font{
+    font-family: "Anton", sans-serif;
+}
+
+.inter-font{
+    font-family: "Inter", sans-serif;
+}
+
